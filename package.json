@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "sass --watch src/scss:dist/css"
+    "build-css": "sass --watch src/scss/main.scss:dist/css/main.css"
   },
   "keywords": [],
   "author": "",

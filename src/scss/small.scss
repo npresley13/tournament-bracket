@@ -1,0 +1,50 @@
+.bracket {
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+    column-gap: 5em;
+}
+
+// Bracket Skeleton
+
+.play-in {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+.round1 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.round2 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.round3 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.round4 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.winner {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+// Team Styling
+
+.team {
+    border-style: solid;
+}
