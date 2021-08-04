@@ -1,8 +1,8 @@
 .bracket {
     display: flex;
     flex-direction: row;
-    height: 80vh;
-    column-gap: 5em;
+    column-gap: 10em;
+    margin-left: 3em;
 }
 
 // Bracket Skeleton
@@ -43,8 +43,19 @@
     flex-direction: column;
 }
 
+.game {
+    margin: 20px 0;
+}
+
+h3 {
+    margin: 5px 0;
+    text-align: right;
+}
+
 // Team Styling
 
 .team {
     border-style: solid;
+    display: flex;
+    justify-content: space-between;
 }
