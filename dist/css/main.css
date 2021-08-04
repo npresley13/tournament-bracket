@@ -1,8 +1,13 @@
+body {
+  background-color: lightgray;
+}
+
 .bracket {
   display: flex;
   flex-direction: row;
-  column-gap: 8em;
-  margin-left: 3em;
+  column-gap: 7em;
+  margin: 0 3em;
+  background-color: lightgray;
 }
 
 .play-in {
@@ -48,13 +53,16 @@
 h3 {
   margin: 5px 0;
   text-align: right;
+  font-size: 16px;
+  font-style: italic;
 }
 
 .team {
-  border-style: solid;
   display: flex;
   justify-content: space-between;
   min-width: 200px;
+  background-color: white;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */
