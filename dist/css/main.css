@@ -63,6 +63,42 @@ h3 {
   min-width: 200px;
   background-color: white;
   padding: 5px;
+  column-gap: 10px;
+}
+
+.team-name {
+  width: fit-content;
+  max-width: 125px;
+  border-style: none;
+}
+
+.team-name:focus {
+  outline: none;
+}
+
+.team-score {
+  max-width: 23px;
+  border-style: none;
+  margin: 0;
+  text-align: right;
+  background-color: lightblue;
+}
+
+.team-score:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
 }
 
 /*# sourceMappingURL=main.css.map */
