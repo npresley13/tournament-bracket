@@ -126,7 +126,8 @@ let startingTeams = [
 
 function placeTeams() {
     for (let i = 0; i < startingTeams.length; i++) {
-        startingTeams[i][1] = document.getElementById(`team${i+1}`).value;
+        let submitTeam = document.getElementById(`team${i+1}`);
+        startingTeams[i][1] = submitTeam.value;
     }
 }
 placeTeams();
