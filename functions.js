@@ -1,15 +1,20 @@
 let startingTeams = [];
 let teams = document.getElementsByClassName("team");
-let rank = document.getElementsByClassName("team-rank");
+let teamRank = document.getElementsByClassName("team-rank");
 let inputName = document.getElementsByClassName("team-name");
 const inputScore = document.getElementsByClassName("team-score");
 
-const placeTeams = () => {
+const addTeams = () => {
+    let team = {
+        rank: "",
+        teamName: "",
+        score: "",
+    }
     console.log(startingTeams);
 }
 
 Array.from(inputScore).forEach(function(inputScore) {
-    inputScore.addEventListener('focusout', function(){placeTeams()});
+    inputScore.addEventListener('focusout', function(){addTeams()});
 });
 
 
