@@ -57,6 +57,11 @@ h3 {
   font-style: italic;
 }
 
+#champion {
+  justify-content: space-around;
+  margin-right: 3em;
+}
+
 .team {
   display: flex;
   justify-content: space-between;
