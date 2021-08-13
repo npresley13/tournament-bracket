@@ -96,6 +96,12 @@ h3 {
     outline: none;
 }
 
+.team p {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
 // Remove up and down arrow buttons on team-score input
 
 input::-webkit-outer-spin-button,

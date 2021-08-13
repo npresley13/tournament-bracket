@@ -88,6 +88,12 @@ h3 {
   outline: none;
 }
 
+.team p {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   /* display: none; <- Crashes Chrome on hover */
