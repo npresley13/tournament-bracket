@@ -16,8 +16,15 @@ const addTeams = () => {
 
 //***issue*** when you click off the input element, it is no longer the active element.
 function removeInputField() {
-    let currentInputField = document.activeElement;
-    currentInputField.remove();
+    let inputNameArr = Array.from(inputName);
+    for (let i = 0; i < inputNameArr.length; i++) {
+        let teamID = "team"+(i+1);
+        let currentTeamID = document.getElementById(teamID);
+        if (currenTeamID.value !== "") {
+            currentTeamID.remove();
+        }
+    }
+    
 }
 
 Array.from(inputScore).forEach(function(inputScore) {
@@ -25,7 +32,7 @@ Array.from(inputScore).forEach(function(inputScore) {
 });
 
 Array.from(inputName).forEach(function(inputName) {
-    inputName.addEventListener('onblur', function(){removeInputField()});
+    inputName.addEventListener('focusout', function(){removeInputField()});
 });
 
 
