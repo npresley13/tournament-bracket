@@ -30,6 +30,7 @@ Array.from(inputScore).forEach(function(inputScore) {
 //rather than rewriting it.
 //builds an array from input values 
 function buildTeams(numTeams) {
+    startingTeams = [];
     for(i = 0; i < numTeams; i++) {
         if(document.getElementById("score"+(i+1)).value !== "") {
             let team = {
