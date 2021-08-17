@@ -8,7 +8,7 @@ let inputScore = document.getElementsByClassName("team-score");
 //     localStorage.setItem('MyTeams', JSON.stringify(startingTeams));
 // }
 
-//***issue*** when you click off the input element, it is no longer the active element.
+
 
 
 Array.from(inputScore).forEach(function(inputScore) {
@@ -25,6 +25,9 @@ Array.from(inputScore).forEach(function(inputScore) {
 //     }
 // }
 
+
+//***issue*** when you click off a score element it adds to the array
+//rather than rewriting it.
 //builds an array from input values 
 function buildTeams(numTeams) {
     for(i = 0; i < numTeams; i++) {
