@@ -31,11 +31,14 @@ Array.from(inputScore).forEach(function(inputScore) {
 //builds an array from input values 
 function buildTeams(numTeams) {
     for(i = 0; i < numTeams; i++) {
-        let team = {
-            rank: document.getElementById("rank"+(i+1)),
-            teamName: document.getElementById("team"+(i+1)).value,
+        if(document.getElementById("score"+(i+1)).value !== "") {
+            let team = {
+                rank: document.getElementById("rank"+(i+1)).textContent,
+                teamName: document.getElementById("team"+(i+1)).value,
+                score: document.getElementById("score"+(i+1)).value
+            }
+            startingTeams.push(team);
         }
-        startingTeams.push(team);
     }
     console.log(startingTeams);
 }
