@@ -1,4 +1,5 @@
 let startingTeams = [];
+let winners = []
 let teams = document.getElementsByClassName("team");
 let teamRank = document.getElementsByClassName("team-rank");
 let inputName = document.getElementsByClassName("team-name");
@@ -31,7 +32,7 @@ Array.from(inputScore).forEach(function(inputScore) {
 //builds an array from input values 
 function buildTeams(numTeams) {
     startingTeams = [];
-    for(i = 0; i < numTeams; i++) {
+    for(let i = 0; i < numTeams; i++) {
         if(document.getElementById("score"+(i+1)).value !== "") {
             let team = {
                 rank: document.getElementById("rank"+(i+1)).textContent,
@@ -39,7 +40,16 @@ function buildTeams(numTeams) {
                 score: document.getElementById("score"+(i+1)).value
             }
             startingTeams.push(team);
+            console.log(startingTeams[i].rank);
         }
+        
     }
     console.log(startingTeams);
+}
+
+function changeTeamName() {
+    const replaceTeam = document.getElementById("team"+(i+1));
+    const pTeam = document.createElement('p');
+    pTeam.innerHTML = startingTeams[i].teamName;
+    replaceTeam.parentNode.replaceChild(pTeam, replaceTeam);
 }
