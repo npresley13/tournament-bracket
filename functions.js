@@ -40,16 +40,8 @@ function buildTeams(numTeams) {
                 score: document.getElementById("score"+(i+1)).value
             }
             startingTeams.push(team);
-            console.log(startingTeams[i].rank);
         }
-        
     }
     console.log(startingTeams);
 }
 
-function changeTeamName() {
-    const replaceTeam = document.getElementById("team"+(i+1));
-    const pTeam = document.createElement('p');
-    pTeam.innerHTML = startingTeams[i].teamName;
-    replaceTeam.parentNode.replaceChild(pTeam, replaceTeam);
-}
