@@ -1,11 +1,12 @@
-const numTeams = document.getElementById("num-teams").value;
-const teamSubmit = document.getElementById("num-teams-submit");
+
+let teamSubmit = document.getElementById("num-teams-submit");
 let teamList = document.getElementById("team-input-list");
 
-teamSubmit.addEventListener("submit",buildTeams);
+teamSubmit.addEventListener("submit",buildTeams());
 
 function buildTeams() {
-    console.log("submited");
+    let numTeams = document.getElementById("num-teams").value;
+    console.log(numTeams);
     // for(let i = 0; i < numTeams; i++) {
     //     let newInput = document.createElement("input");
     //     newInput.type = "text";

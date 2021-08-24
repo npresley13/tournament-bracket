@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,18 @@
     <link rel="stylesheet" href="dist/css/main.css">
     <title>Document</title>
 </head>
+
 <body>
     <div>
-        <input type="number" placeholder="How many teams are there?" id="num-teams">
-        <input type="submit" value="Submit" id="num-teams-submit">
+        <form>
+            <input type="number" placeholder="How many teams are there?" id="num-teams" name="num-teams">
+            <button id="num-teams-submit">Generate Teams</button>
+        </form>
     </div>
     <div id="team-input-list">
 
     </div>
     <script src="teams-generator.js"></script>
 </body>
+
 </html>
