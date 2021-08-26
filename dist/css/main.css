@@ -112,4 +112,21 @@ input[type=number] {
   /* Firefox */
 }
 
+#team-input-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.teamName {
+  width: fit-content;
+  max-width: 50%;
+  min-width: 250px;
+  margin-bottom: 10px;
+}
+
+#teamSubmitButton {
+  max-width: fit-content;
+}
+
 /*# sourceMappingURL=main.css.map */

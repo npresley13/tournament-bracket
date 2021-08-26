@@ -17,4 +17,8 @@ function buildTeams(e) {
         newInput.className = "teamName";
         teamList.appendChild(newInput);
     }
+    const submitButton = document.createElement("button");
+    submitButton.innerHTML = "Submit";
+    submitButton.id = "teamSubmitButton";
+    teamList.appendChild(submitButton);
 }
