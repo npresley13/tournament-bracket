@@ -121,10 +121,23 @@ input[type=number] {
 }
 
 // Team Generator
+#wrapper {
+    text-align: center;
+    max-width: 1000px;
+    align-self: center;
+    margin: auto;
+}
+
+#num-teams-wrapper {
+    margin-top: 2em;
+}
+
 #team-input-list {
     display: flex;
     flex-direction: column;
     margin-top: 2em;
+    align-items: center;
+    justify-content: center;
 }
 
 .teamName {
@@ -137,3 +150,4 @@ input[type=number] {
 #teamSubmitButton {
     max-width: fit-content;
 }
+
