@@ -1,7 +1,7 @@
 
 const teamSubmit = document.getElementById("num-teams-submit");
 const teamList = document.getElementById("team-input-list");
-
+let teamArr = [];
 
 //Event Listners
 
@@ -22,6 +22,7 @@ function buildTeams(e) {
         newInput.type = "text";
         newInput.placeholder = `Team #${i+1}`;
         newInput.className = "teamName";
+        newInput.id = `team${i+1}`;
         teamList.appendChild(newInput);
     }
     const submitButton = document.createElement("button");
@@ -39,5 +40,13 @@ document.addEventListener("click", function(e){
 });
 
 function addTeamsToObject() {
-    console.log("this worked");
+    let numTeams = document.getElementById("num-teams").value;
+    for(let i = 0; i < numTeams; i++) {
+        let team = {
+            rank: i+1,
+            teamName: document.getElementById("team"+(i+1)).value
+        }
+        teamArr.push(team);
+    }
+    console.log(teamArr);
 }
