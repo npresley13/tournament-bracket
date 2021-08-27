@@ -1,10 +1,17 @@
 
-let teamSubmit = document.getElementById("num-teams-submit");
-let teamList = document.getElementById("team-input-list");
+const teamSubmit = document.getElementById("num-teams-submit");
+const teamList = document.getElementById("team-input-list");
+
+
+//Event Listners
 
 teamSubmit.addEventListener("click",function(e) {
     buildTeams(e)
 });
+
+
+
+//Creates input fields for the number of teams you input
 
 function buildTeams(e) {
     e.preventDefault();
@@ -21,4 +28,16 @@ function buildTeams(e) {
     submitButton.innerHTML = "Submit";
     submitButton.id = "teamSubmitButton";
     teamList.appendChild(submitButton);
+}
+
+//Creates an array of objects for each team input.
+
+document.addEventListener("click", function(e){
+    if(e.target && e.target.id == 'teamSubmitButton') {
+        addTeamsToObject();
+    }
+});
+
+function addTeamsToObject() {
+    console.log("this worked");
 }
