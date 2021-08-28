@@ -50,3 +50,7 @@ function addTeamsToObject() {
     }
     console.log(teamArr);
 }
+
+// Count the number of teams saved to the Array and match it with the proper bracket.
+// Fill the bracket out with the rank in the proper positions.
+// Advance teams in the bracket based on the scores
