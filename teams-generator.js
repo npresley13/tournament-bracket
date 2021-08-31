@@ -49,8 +49,17 @@ function addTeamsToObject() {
         teamArr.push(team);
     }
     console.log(teamArr);
+    placeTeams();
 }
 
-// Count the number of teams saved to the Array and match it with the proper bracket.
-// Fill the bracket out with the rank in the proper positions.
+// Match teams saved to the Array and with the proper bracket.
+
+function placeTeams() {
+    window.location.href = 'twentyteambracket.html';
+    for (let i = 0; i < teamArr.length; i++) {
+        let nameTeam = document.getElementById(`team${i+1}`);
+        nameTeam.innerHTML = teamArr[i].teamName;
+    }
+}
+
 // Advance teams in the bracket based on the scores
