@@ -17,6 +17,7 @@ function buildTeams(e) {
     e.preventDefault();
     let numTeams = document.getElementById("num-teams").value;
     teamList.innerHTML = "";
+    localStorage.clear();
     for(let i = 0; i < numTeams; i++) {
         let newInput = document.createElement("input");
         newInput.type = "text";
@@ -49,16 +50,18 @@ function addTeamsToObject() {
         teamArr.push(team);
     }
     console.log(teamArr);
-    placeTeams();
+    window.localStorage.setItem('team', JSON.stringify(teamArr));
+    window.location.href = 'twentyteambracket.html';
 }
 
-// Match teams saved to the Array and with the proper bracket.
+// Match teams saved to the Array with the proper bracket.
 
 function placeTeams() {
-    window.location.href = 'twentyteambracket.html';
-    for (let i = 0; i < teamArr.length; i++) {
+    console.log("it got this far");
+    let teamArr2 = JSON.parse(window.localStorage.getItem('team'));
+    for (let i = 0; i < teamArr2.length; i++) {
         let nameTeam = document.getElementById(`team${i+1}`);
-        nameTeam.innerHTML = teamArr[i].teamName;
+        nameTeam.innerHTML = teamArr2[i].teamName;
     }
 }
 
