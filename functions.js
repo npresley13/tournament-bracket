@@ -23,6 +23,9 @@ let inputScore = document.getElementsByClassName("team-score");
 //     }
 // }
 
+
+// Match teams saved to the Array with the proper bracket.
+
 function placeTeams() {
     console.log("it got this far");
     let teamArr2 = JSON.parse(window.localStorage.getItem('team'));

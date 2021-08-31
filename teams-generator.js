@@ -54,15 +54,7 @@ function addTeamsToObject() {
     window.location.href = 'twentyteambracket.html';
 }
 
-// Match teams saved to the Array with the proper bracket.
 
-function placeTeams() {
-    console.log("it got this far");
-    let teamArr2 = JSON.parse(window.localStorage.getItem('team'));
-    for (let i = 0; i < teamArr2.length; i++) {
-        let nameTeam = document.getElementById(`team${i+1}`);
-        nameTeam.innerHTML = teamArr2[i].teamName;
-    }
-}
+
 
 // Advance teams in the bracket based on the scores
