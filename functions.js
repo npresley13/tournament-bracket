@@ -6,7 +6,6 @@ let inputName = document.getElementsByClassName("team-name");
 let inputScore = document.getElementsByClassName("team-score");
 
 
-
 // Adds event listener to when someone clicks out of the score box
 // this event listner will be used to advance teams to the next round.
 // Array.from(inputScore).forEach(function(inputScore) {
@@ -42,8 +41,7 @@ function placeTeams() {
         try {
             nameTeam.innerHTML = teamArr2[i].teamName;
         } catch(error) {
-            nameTeam.parentNode.style.backgroundColor = "#FD1D53";
-            console.log("this worked");
+            nameTeam.parentNode.style.backgroundColor = "#FF2941";
         }
     }
 }
