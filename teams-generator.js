@@ -53,8 +53,3 @@ function addTeamsToObject() {
     window.localStorage.setItem('team', JSON.stringify(teamArr));
     window.location.href = 'twentyteambracket.html';
 }
-
-
-
-
-// Advance teams in the bracket based on the scores

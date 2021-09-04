@@ -25,14 +25,29 @@ let inputScore = document.getElementsByClassName("team-score");
 
 
 // Match teams saved to the Array with the proper bracket.
+// Creates an array from local storage then places teams based on the Bracket slot ID
+// function placeTeams() {
+//     let teamArr2 = JSON.parse(window.localStorage.getItem('team'));
+//     for (let i = 0; i < teamArr2.length; i++) {
+//         let nameTeam = document.getElementById(`team${i+1}`);
+//         nameTeam.innerHTML = teamArr2[i].teamName;
+//     }
+// }
+
 
 function placeTeams() {
-    console.log("it got this far");
     let teamArr2 = JSON.parse(window.localStorage.getItem('team'));
-    for (let i = 0; i < teamArr2.length; i++) {
+    for (let i = 0; i < 20; i++) {
         let nameTeam = document.getElementById(`team${i+1}`);
-        nameTeam.innerHTML = teamArr2[i].teamName;
+        try {
+            nameTeam.innerHTML = teamArr2[i].teamName;
+        } catch(error) {
+            nameTeam.parentNode.style.backgroundColor = "#FD1D53";
+            console.log("this worked");
+        }
     }
 }
 
+// Builds the bracket on page load
 placeTeams();
+
