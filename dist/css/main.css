@@ -142,4 +142,8 @@ input[type=number] {
   max-width: fit-content;
 }
 
+.team.dragging {
+  opacity: 0.5;
+}
+
 /*# sourceMappingURL=main.css.map */

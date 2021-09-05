@@ -4,7 +4,8 @@ let teams = document.getElementsByClassName("team");
 let teamRank = document.getElementsByClassName("team-rank");
 let inputName = document.getElementsByClassName("team-name");
 let inputScore = document.getElementsByClassName("team-score");
-
+const draggables = document.querySelectorAll('.team');
+const containers = document.querySelectorAll('.team');
 
 // Adds event listener to when someone clicks out of the score box
 // this event listner will be used to advance teams to the next round.
@@ -49,3 +50,30 @@ function placeTeams() {
 // Builds the bracket on page load
 placeTeams();
 
+// DRAG AND DROP
+
+draggables.forEach(draggable => {
+    draggable.addEventListener('dragstart', () => {
+        draggable.classList.add('dragging');
+    })
+
+    draggable.addEventListener('dragend', () => {
+        draggable.classList.remove('dragging');
+        
+    })
+})
+
+
+containers.forEach(container => {
+    container.addEventListener('dragover', e => {
+        e.preventDefault();
+        const draggable = document.querySelector('.dragging');
+        container.appendChild(draggable);
+        
+        
+    })
+})
+
+
+// i think i need to add another div inbetween div.team and the children.
+// currently im trying to drag an element into a container of the same size.

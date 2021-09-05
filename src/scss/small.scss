@@ -151,3 +151,8 @@ input[type=number] {
     max-width: fit-content;
 }
 
+//Draggables
+
+.team.dragging {
+    opacity: .5;
+}
