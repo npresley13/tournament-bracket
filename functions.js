@@ -75,5 +75,5 @@ containers.forEach(container => {
 })
 
 
-// i think i need to add another div inbetween div.team and the children.
-// currently im trying to drag an element into a container of the same size.
+// I want to be able to create copy of the dragging node and leave it
+// in it's original position.
