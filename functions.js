@@ -4,7 +4,7 @@ let teams = document.getElementsByClassName("team");
 let teamRank = document.getElementsByClassName("team-rank");
 let inputName = document.getElementsByClassName("team-name");
 let inputScore = document.getElementsByClassName("team-score");
-const draggables = document.querySelectorAll('.team');
+const draggables = document.querySelectorAll('.draggable');
 const containers = document.querySelectorAll('.team');
 
 // Adds event listener to when someone clicks out of the score box
@@ -39,10 +39,12 @@ function placeTeams() {
     let teamArr2 = JSON.parse(window.localStorage.getItem('team'));
     for (let i = 0; i < 20; i++) {
         let nameTeam = document.getElementById(`team${i+1}`);
+        let teamScore = document.getElementById(`score${i+1}`);
         try {
             nameTeam.innerHTML = teamArr2[i].teamName;
         } catch(error) {
             nameTeam.parentNode.style.backgroundColor = "#FF2941";
+            teamScore.remove();
         }
     }
 }
@@ -68,9 +70,7 @@ containers.forEach(container => {
     container.addEventListener('dragover', e => {
         e.preventDefault();
         const draggable = document.querySelector('.dragging');
-        container.appendChild(draggable);
-        
-        
+        container.appendChild(draggable); 
     })
 })
 

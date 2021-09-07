@@ -71,12 +71,10 @@ h3 {
 // Team Styling
 
 .team {
-    display: flex;
-    justify-content: space-between;
+    min-height: 27px;
     min-width: 200px;
     background-color: white;
-    padding: 5px;
-    column-gap: 10px;
+    display:block;
 }
 
 .team-name {
@@ -155,4 +153,13 @@ input[type=number] {
 
 .team.dragging {
     opacity: .5;
+}
+
+.draggable {
+    display: flex;
+    justify-content: space-between;
+    min-width: 200px;
+    background-color: white;
+    padding: 5px;
+    column-gap: 10px;
 }
