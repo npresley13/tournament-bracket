@@ -70,6 +70,7 @@ containers.forEach(container => {
     container.addEventListener('dragover', e => {
         e.preventDefault();
         const draggable = document.querySelector('.dragging');
+        container.innerHTML = "";
         container.appendChild(draggable); 
     })
 })
