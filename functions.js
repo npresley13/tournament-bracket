@@ -58,13 +58,17 @@ draggables.forEach(draggable => {
     draggable.addEventListener('dragstart', () => {
         draggable.classList.add('dragging');
     })
+    
+    draggable.addEventListener('dragend', () => {
+        draggable.classList.remove('dragging');
+    })
 })
 
 
 containers.forEach(container => {
     container.addEventListener('dragover', e => {
         e.preventDefault();
-        const draggable = document.querySelector('.dragging');
+        //const draggable = document.querySelector('.dragging');
     })
 
     container.addEventListener('drop', () => {
@@ -75,7 +79,3 @@ containers.forEach(container => {
         draggable.classList.remove('dragging');
     })
 })
-
-
-// I want to be able to create copy of the dragging node and leave it
-// in it's original position.
