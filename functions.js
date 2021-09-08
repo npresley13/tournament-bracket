@@ -68,8 +68,9 @@ containers.forEach(container => {
     })
 
     container.addEventListener('drop', () => {
-        const draggable = document.querySelector('.dragging');
+        const draggable = document.querySelector('.dragging').cloneNode(true);
         container.innerHTML = "";
+        draggable.querySelector('input').value = '';
         container.appendChild(draggable);
         draggable.classList.remove('dragging');
     })
