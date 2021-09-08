@@ -52,30 +52,29 @@ function placeTeams() {
 // Builds the bracket on page load
 placeTeams();
 
-// DRAG AND DROP
+// DRAG AND DROP 2
 
-draggables.forEach(draggable => {
-    draggable.addEventListener('dragstart', () => {
-        draggable.classList.add('dragging');
-    })
-    
-    draggable.addEventListener('dragend', () => {
-        draggable.classList.remove('dragging');
-    })
+let draggable;
+
+document.addEventListener('dragstart', function(event) {
+    draggable = event.target;
+    draggable.classList.add('dragging');
 })
 
+document.addEventListener('dragend', () => {
+    draggable.classList.remove('dragging');
+})
 
 containers.forEach(container => {
     container.addEventListener('dragover', e => {
         e.preventDefault();
-        //const draggable = document.querySelector('.dragging');
     })
-
     container.addEventListener('drop', () => {
-        const draggable = document.querySelector('.dragging').cloneNode(true);
         container.innerHTML = "";
-        draggable.querySelector('input').value = '';
-        container.appendChild(draggable);
-        draggable.classList.remove('dragging');
+        dragClone = draggable.cloneNode(true);
+        dragClone.querySelector('input').value = '';
+        container.appendChild(dragClone);
+        
     })
 })
+
