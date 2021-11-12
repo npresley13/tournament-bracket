@@ -188,3 +188,17 @@ input[type=number] {
 .nav-item {
     text-decoration: none;
 }
+
+// Container
+#main-container {
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+// Counter
+
+#counter {
+    font-size: 3em;
+    margin: 0;
+}

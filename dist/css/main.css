@@ -175,4 +175,15 @@ input[type=number] {
   text-decoration: none;
 }
 
+#main-container {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+#counter {
+  font-size: 3em;
+  margin: 0;
+}
+
 /*# sourceMappingURL=main.css.map */
