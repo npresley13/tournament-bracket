@@ -14,3 +14,18 @@ const navs = [
 const navBarMarkup = navs.map(nav => `<li class="navLink"><a href="${nav.Url}" class="${nav.Class}">${nav.Text}</a></li>`).join(' ');
 
 document.getElementById("navList").innerHTML = navBarMarkup;
+
+
+const burger = document.getElementById('hamburger');
+const nav = document.getElementById('primaryNav');
+
+function toggleNav(){
+    burger.classList.toggle('fa-bars');
+    burger.classList.toggle('fa-times');
+    document.body.classList.toggle('lock-scroll');
+    nav.classList.toggle('nav-active');
+}
+
+burger.addEventListener('click', function() {
+    toggleNav();
+});

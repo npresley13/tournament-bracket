@@ -1,5 +1,11 @@
 body {
     background-color: lightgray;
+    margin: 0;
+}
+
+//added to the body to prevent scrolling when mobile menu is open
+.lock-scroll {
+    overflow: hidden;
 }
 
 .bracket {
@@ -164,20 +170,28 @@ input[type=number] {
     column-gap: 10px;
 }
 
-// Navigation
+// Navigation -- Mobile
+
+#burger-container {
+    text-align: right;
+}
 
 #primaryNav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    height: 100vh;
+    background-color: $lightPurple;
+    position: absolute;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
+    transition: all 400ms;
+    z-index: 2;
 }
 
 #navList {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     column-gap: 1em;
-    justify-content: flex-end;
 }
 
 .navLink {
@@ -187,6 +201,14 @@ input[type=number] {
 
 .nav-item {
     text-decoration: none;
+}
+
+.nav-inactive {
+    right: -100%;
+}
+
+.nav-active {
+    right: 0;
 }
 
 // Container

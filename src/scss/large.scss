@@ -1,0 +1,29 @@
+#primaryNav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    position: relative;
+    right: auto;
+}
+
+#hamburger {
+    display: none;
+}
+
+#navList {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+    justify-content: flex-end;
+}
+
+.navLink {
+    list-style-type: none;
+    
+}
+
+.nav-item {
+    text-decoration: none;
+}

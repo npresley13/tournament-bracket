@@ -1,5 +1,10 @@
 body {
   background-color: lightgray;
+  margin: 0;
+}
+
+.lock-scroll {
+  overflow: hidden;
 }
 
 .bracket {
@@ -153,18 +158,26 @@ input[type=number] {
   column-gap: 10px;
 }
 
+#burger-container {
+  text-align: right;
+}
+
 #primaryNav {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #FE18D3;
+  position: absolute;
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-start;
+  transition: all 400ms;
+  z-index: 2;
 }
 
 #navList {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   column-gap: 1em;
-  justify-content: flex-end;
 }
 
 .navLink {
@@ -173,6 +186,14 @@ input[type=number] {
 
 .nav-item {
   text-decoration: none;
+}
+
+.nav-inactive {
+  right: -100%;
+}
+
+.nav-active {
+  right: 0;
 }
 
 #main-container {
@@ -185,5 +206,37 @@ input[type=number] {
   font-size: 3em;
   margin: 0;
 }
+
+@media only screen and (min-width: 1024px) {
+  #primaryNav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    position: relative;
+    right: auto;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  #navList {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+    justify-content: flex-end;
+  }
+
+  .navLink {
+    list-style-type: none;
+  }
+
+  .nav-item {
+    text-decoration: none;
+  }
+}
+/* end of media query */
 
 /*# sourceMappingURL=main.css.map */
