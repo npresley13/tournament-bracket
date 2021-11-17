@@ -5,6 +5,10 @@ fetch("https://api.openweathermap.org/data/2.5/weather?q=Louisville&appid=d84b7e
         return response.json()
     })
     .then(function (data) {
-        console.log(data.main.temp);
-        document.getElementById('weather').innerHTML = data.main.temp
+        console.log(data);
+        let temp = document.createElement('p');
+        temp.setAttribute("id", "temperature");
+        temp.innerHTML =  `${Math.round(((data.main.temp_max - 273.15) * 1.8) + 32)}&#8457`;
+        document.getElementById('weather').appendChild(temp);
     })
+    
